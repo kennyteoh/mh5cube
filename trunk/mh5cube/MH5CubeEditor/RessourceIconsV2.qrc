@@ -1,0 +1,46 @@
+<RCC>
+    <qresource prefix="/new/prefix1" >
+        <file>ressources/icons_cube/CubeClone.png</file>
+        <file>ressources/icons_cube/CubeInsert.png</file>
+        <file>ressources/icons_cube/CubeMove.png</file>
+        <file>ressources/icons_cube/CubeMoveX-minus.png</file>
+        <file>ressources/icons_cube/CubeMoveX-plus.png</file>
+        <file>ressources/icons_cube/CubeMoveY-minus.png</file>
+        <file>ressources/icons_cube/CubeMoveY-plus.png</file>
+        <file>ressources/icons_cube/CubeMoveZ-minus.png</file>
+        <file>ressources/icons_cube/CubeMoveZ-plus.png</file>
+        <file>ressources/icons_cube/CubeRotate.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/list-remove.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/document-new.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/document-open.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/document-save.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/document-save-as.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-bottom.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-down.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-first.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-home.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-jump.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-last.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-next.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-previous.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-top.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/go-up.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/list-add.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/edit-select-all.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/edit-undo.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/edit-redo.png</file>
+        <file>ressources/icons_cube/CubeCoordinates.png</file>
+        <file>ressources/icons_cube/CubePerspective.png</file>
+        <file>ressources/icons_cube/CubeTurnZ-minus.png</file>
+        <file>ressources/icons_cube/CubeTurnZ-plus.png</file>
+        <file>ressources/icons_cube/CubeTurnX-minus.png</file>
+        <file>ressources/icons_cube/CubeTurnX-plus.png</file>
+        <file>ressources/icons_cube/CubeTurnY-minus.png</file>
+        <file>ressources/icons_cube/CubeTurnY-plus.png</file>
+        <file>ressources/icons_cube/CubeResetRotation.png</file>
+        <file>ressources/icons_cube/CubeNightMode.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/categories/preferences-system.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/media-playback-start.png</file>
+        <file>ressources/tango-icon-theme-0.8.90/32x32/actions/appointment-new.png</file>
+    </qresource>
+</RCC>

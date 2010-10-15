@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>874</width>
+    <height>653</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AnimatedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>874</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatei">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionAppend"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuInfo">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionSelect_All"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuAnsicht">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionPerspective"/>
+    <addaction name="actionCoordinates"/>
+    <addaction name="actionNightMode"/>
+    <addaction name="actionReset_Rotation"/>
+    <addaction name="separator"/>
+    <addaction name="actionSettings"/>
+    <addaction name="actionDeveloperOutput"/>
+    <addaction name="actionLayout_Save"/>
+    <addaction name="actionLayout_Load"/>
+   </widget>
+   <addaction name="menuDatei"/>
+   <addaction name="menuInfo"/>
+   <addaction name="menuAnsicht"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSave"/>
+   <addaction name="actionSaveAs"/>
+   <addaction name="actionOpen"/>
+   <addaction name="separator"/>
+   <addaction name="actionPerspective"/>
+   <addaction name="actionCoordinates"/>
+   <addaction name="actionNightMode"/>
+   <addaction name="actionReset_Rotation"/>
+   <addaction name="separator"/>
+   <addaction name="actionSettings"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidgetEdit">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Move/Rotate Figure</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="tabMove">
+        <attribute name="icon">
+         <iconset resource="RessourceIconsV2.qrc">
+          <normaloff>:/new/prefix1/ressources/icons_cube/CubeMove.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeMove.png</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>Move</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButtonMoveXMinus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>X-</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveX-minus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveX-minus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QPushButton" name="pushButtonMoveYMinus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Y-</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveY-minus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveY-minus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QPushButton" name="pushButtonMoveYPlus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Y+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveY-plus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveY-plus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QPushButton" name="pushButtonMoveZMinus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Z-</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveZ-minus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveZ-minus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QPushButton" name="pushButtonMoveZPlus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Z+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveZ-plus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveZ-plus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButtonMoveXPlus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>X+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveX-plus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeMoveX-plus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabRotate">
+        <attribute name="icon">
+         <iconset resource="RessourceIconsV2.qrc">
+          <normaloff>:/new/prefix1/ressources/icons_cube/CubeRotate.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeRotate.png</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>Rotate</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButtonRotateXMinus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>X-</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnX-minus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnX-minus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButtonRotateXPlus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>X+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnX-plus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnX-plus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="pushButtonRotateYMinus">
+           <property name="text">
+            <string>Y-</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnY-minus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnY-minus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="pushButtonRotateYPlus">
+           <property name="text">
+            <string>Y+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnY-plus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnY-plus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="pushButtonRotateZMinus">
+           <property name="text">
+            <string>Z-</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnZ-minus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnZ-minus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="pushButtonRotateZPlus">
+           <property name="text">
+            <string>Z+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="RessourceIconsV2.qrc">
+             <normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnZ-plus.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeTurnZ-plus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidgetStates">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="accessibleName">
+    <string/>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Edit States</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_5">
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButtonStatesInvert">
+       <property name="text">
+        <string>Invert</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButtonStatesUnsetAll">
+       <property name="text">
+        <string>UnsetAll</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButtonStatesSetAll">
+       <property name="text">
+        <string>SetAll</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButtonStatesRandom">
+       <property name="text">
+        <string>Random</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidgetSelection">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Selection</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinAndMaxSize</enum>
+     </property>
+     <item row="3" column="2">
+      <widget class="QSlider" name="horizontalSliderSelectionColumn">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>1</number>
+       </property>
+       <property name="tracking">
+        <bool>true</bool>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QSlider" name="horizontalSliderSelectionRow">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>1</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="labelRow">
+       <property name="text">
+        <string>Row</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="labelColumn">
+       <property name="text">
+        <string>Col</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QCheckBox" name="checkBoxSelectionRow">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QCheckBox" name="checkBoxSelectionColumn"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QSlider" name="horizontalSliderSelectionLevel">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>1</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QCheckBox" name="checkBoxSelectionLevel">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="labelLevel">
+       <property name="text">
+        <string>Level</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QPushButton" name="pushButtonSelectionUnset">
+       <property name="text">
+        <string>Unset</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="pushButtonSelectionSet">
+       <property name="text">
+        <string>Set</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidgetFigures">
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Figures</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0" colspan="2">
+      <widget class="QTableView" name="tableView">
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="pushButtonFigMoveUp">
+       <property name="text">
+        <string>Move Up</string>
+       </property>
+       <property name="icon">
+        <iconset resource="RessourceIconsV2.qrc">
+         <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/go-up.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/go-up.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Alt+Up</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="pushButtonFigClone">
+       <property name="text">
+        <string>Clone</string>
+       </property>
+       <property name="icon">
+        <iconset resource="RessourceIconsV2.qrc">
+         <normaloff>:/new/prefix1/ressources/icons_cube/CubeClone.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeClone.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Alt+C</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="pushButtonFigMoveDown">
+       <property name="text">
+        <string>Move Down</string>
+       </property>
+       <property name="icon">
+        <iconset resource="RessourceIconsV2.qrc">
+         <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/go-down.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/go-down.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Alt+Down</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="pushButtonFigAdd">
+       <property name="text">
+        <string>Add</string>
+       </property>
+       <property name="icon">
+        <iconset resource="RessourceIconsV2.qrc">
+         <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/list-add.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/list-add.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Alt+A</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="pushButtonFigInsert">
+       <property name="text">
+        <string>Insert</string>
+       </property>
+       <property name="icon">
+        <iconset resource="RessourceIconsV2.qrc">
+         <normaloff>:/new/prefix1/ressources/icons_cube/CubeInsert.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeInsert.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Alt+I</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="pushButtonFigDelete">
+       <property name="text">
+        <string>Del</string>
+       </property>
+       <property name="icon">
+        <iconset resource="RessourceIconsV2.qrc">
+         <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/list-remove.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/list-remove.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Alt+D</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButtonFigPlay">
+       <property name="text">
+        <string>Play</string>
+       </property>
+       <property name="icon">
+        <iconset resource="RessourceIconsV2.qrc">
+         <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/media-playback-start.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/media-playback-start.png</iconset>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButtonFigTimes">
+       <property name="text">
+        <string>Change Times</string>
+       </property>
+       <property name="icon">
+        <iconset resource="RessourceIconsV2.qrc">
+         <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/appointment-new.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/appointment-new.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-save.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-open.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionPerspective">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/icons_cube/CubePerspective.png</normaloff>:/new/prefix1/ressources/icons_cube/CubePerspective.png</iconset>
+   </property>
+   <property name="text">
+    <string>Perspective</string>
+   </property>
+   <property name="toolTip">
+    <string>Switch Perspective</string>
+   </property>
+   <property name="shortcut">
+    <string>P</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSelect_All">
+   <property name="text">
+    <string>Select All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionLayout_Default">
+   <property name="text">
+    <string>Default Layout</string>
+   </property>
+   <property name="toolTip">
+    <string>Restore Default Layout</string>
+   </property>
+  </action>
+  <action name="actionLayout_Save">
+   <property name="text">
+    <string>Save Layout</string>
+   </property>
+   <property name="toolTip">
+    <string>Save Current Layout</string>
+   </property>
+  </action>
+  <action name="actionLayout_Load">
+   <property name="text">
+    <string>Load Layout</string>
+   </property>
+   <property name="toolTip">
+    <string>Load Saved Layout</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-save-as.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As</string>
+   </property>
+   <property name="toolTip">
+    <string>Save As</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+S</string>
+   </property>
+  </action>
+  <action name="actionCoordinates">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/icons_cube/CubeCoordinates.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeCoordinates.png</iconset>
+   </property>
+   <property name="text">
+    <string>Coordinates</string>
+   </property>
+   <property name="toolTip">
+    <string>Display Coordinates</string>
+   </property>
+   <property name="shortcut">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="actionAppend">
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-open.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Append</string>
+   </property>
+   <property name="toolTip">
+    <string>Open File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-new.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/actions/document-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionNightMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/icons_cube/CubeNightMode.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeNightMode.png</iconset>
+   </property>
+   <property name="text">
+    <string>NightMode</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle NightMode</string>
+   </property>
+   <property name="shortcut">
+    <string>N</string>
+   </property>
+  </action>
+  <action name="actionReset_Rotation">
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/icons_cube/CubeResetRotation.png</normaloff>:/new/prefix1/ressources/icons_cube/CubeResetRotation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reset Rotation</string>
+   </property>
+   <property name="shortcut">
+    <string>Home</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="RessourceIconsV2.qrc">
+     <normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/categories/preferences-system.png</normaloff>:/new/prefix1/ressources/tango-icon-theme-0.8.90/32x32/categories/preferences-system.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionDeveloperOutput">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Developer Output</string>
+   </property>
+   <property name="shortcut">
+    <string>F12</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="RessourceIconsV2.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>AddFigure(void)</slot>
+ </slots>
+</ui>
