@@ -1,0 +1,18 @@
+
+INSTALLATION
+----------------------------------------------------------------------
+
+1. Please copy all contents of this folder to a place on your Hard-Disk	(i.e. C:\Program Files\Qube5EditorV2)
+2. Run Qube5EditorV2.exe to launch the application
+
+
+MORE INFORMATION
+-----------------------------------------------------------------------
+For more information on this application visit www.qube-solutions.de
+
+
+Qube Solutions UG (haftungsbeschränkt)
+www.qube-solutions.de
+
+
+

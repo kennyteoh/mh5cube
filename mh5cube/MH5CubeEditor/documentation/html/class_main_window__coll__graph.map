@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=FreeSans, fontsize=10, shape=record];
+	edge [fontname=FreeSans, fontsize=10, labelfontname=FreeSans, labelfontsize=10];
+	graph [bb="0,0,302,112"];
+	Node1 [label=MainWindow, height="0.22", width="1.08", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="116,16", rects="77,8,156,24"];
+	Node2 [label=CubeWidgetGL, height="0.22", width="1.22", color=black, fillcolor=white, style=filled, URL="$class_cube_widget_g_l.html", tooltip="This class renders a 3D Model of the Qube5 in OpenGL and acts as an Editor for a...", pos="44,96", rects="0,88,88,104"];
+	Node3 [label=CubeCommunication, height="0.22", width="1.58", color=black, fillcolor=white, style=filled, URL="$class_cube_communication.html", tooltip="This class, CubeCommunication is used to interact with the Qube.", pos="189,96", rects="132,88,247,104"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label="cubeWidget\ncubeWidgetPreview", pos="s,44,88 44,80 46,68 49,52 58,42 65,34 75,28 84,24", lp="113,56"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=cubeCommunication, pos="s,188,88 187,80 185,68 180,52 171,42 164,34 154,28 145,24", lp="240,56"];
+}
